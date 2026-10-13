@@ -37,7 +37,7 @@
 <script>
 'use strict';
 const $=id=>document.getElementById(id);
-const presets={food:['今天吃点什么？','热气腾腾的火锅','治愈一切的日料','快乐加倍的披萨','清清爽爽的轻食'],weekend:['周末去哪里充充电？','去公园晒太阳','逛一间独立书店','看一场想看的电影','在家好好休息'],small:['今天送自己什么小快乐？','买一束鲜花','喝一杯喜欢的饮品','听一张完整的专辑','散步发现一条新·']};
+const presets={food:['今天吃点什么？','热气腾腾的火锅','治愈一切的日料','快乐加倍的披萨','清清爽爽的轻食'],weekend:['周末去哪里充充电？','去公园晒太阳','逛一间独立书店','看一场想看的电影','在家好好休息'],small:['今天送自己什么小快乐？','买一束鲜花','喝一杯喜欢的饮品','听一张完整的专辑','散步发现一条新路']};
 let deck=[],chosen=false,busy=false,activeQuestion='',history=[];
 const storageKey='suixin-blind-pick-v1';
 function save(){try{localStorage.setItem(storageKey,JSON.stringify({question:$('question').value,options:$('options').value,history}));$('storage-notice').hidden=true;}catch{$('storage-notice').hidden=false;$('storage-notice').textContent='浏览器暂时无法保存记录（存储空间已满或被禁用）。本次记录仍可查看，但关闭页面后可能丢失。';}}
