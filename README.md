@@ -1,2 +1,2 @@
-# suixin-picker
+# Random-picker
 随心盲选器
